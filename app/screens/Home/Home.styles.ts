@@ -1,10 +1,13 @@
 import { StyleSheet } from "react-native";
+import { padding } from "../../config";
 
 const styles = StyleSheet.create({
 	mainContainer: {
 		flex: 1,
-		justifyContent: "center",
-		alignItems: "center"
+		padding: padding.m
+	},
+	textContainer: {
+		padding: padding.m
 	}
 });
 
