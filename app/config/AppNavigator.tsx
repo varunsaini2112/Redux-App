@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { Home } from "../screens";
+import { Count, Home } from "../screens";
 import { RootStackParamList } from "../types";
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -11,6 +11,7 @@ const AppNavigator = () => {
 		<NavigationContainer>
 			<Stack.Navigator>
 				<Stack.Screen name="Home" component={Home} />
+				<Stack.Screen name="Count" component={Count} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
