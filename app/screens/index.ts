@@ -1,3 +1,4 @@
 import Home from "./Home";
+import Count from "./Count";
 
-export { Home };
+export { Home, Count };
