@@ -15,7 +15,7 @@ const fontSizes = {
 	xxl: 24
 };
 
-const padding = {
+const Padding = {
 	xs: 4,
 	s: 8,
 	m: 12,
@@ -42,4 +42,4 @@ const fontStyles = StyleSheet.create({
 	}
 });
 
-export { fontStyles, fontSizes, padding, colors };
+export { fontStyles, fontSizes, Padding, colors };
