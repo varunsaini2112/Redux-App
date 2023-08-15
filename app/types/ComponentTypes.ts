@@ -5,8 +5,9 @@ type LinkType = {
 	href: keyof RootStackParamList;
 };
 
-type LinkProps = LinkType & {
-	onPress: (screenName: keyof RootStackParamList) => void;
+type LinkProps = {
+	value: string;
+	onPress: () => void;
 };
 
 export type { LinkType, LinkProps };

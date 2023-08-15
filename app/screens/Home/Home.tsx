@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { View } from "react-native";
 import { StackScreenProps } from "@react-navigation/stack";
 
@@ -10,7 +11,7 @@ const links: LinkType[] = [
 	{ value: "To-Do List", href: "ToDo" }
 ];
 
-const Home = (props: StackScreenProps<RootStackParamList, "Home">) => {
+const Home: FC<StackScreenProps<RootStackParamList, "Home">> = (props) => {
 	const { navigation } = props;
 
 	const onPressLink = (screenName: keyof RootStackParamList) => {
@@ -23,9 +24,10 @@ const Home = (props: StackScreenProps<RootStackParamList, "Home">) => {
 				<H2>Projects</H2>
 			</View>
 			<View style={styles.textContainer}>
-				{links.map((link) => (
-					<Link {...link} key={link.value} onPress={onPressLink} />
-				))}
+				{links.map((link) => {
+					const onPress = () => onPressLink(link.href);
+					return <Link {...link} key={link.value} onPress={onPress} />;
+				})}
 			</View>
 		</View>
 	);

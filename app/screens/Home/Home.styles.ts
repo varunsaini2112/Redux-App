@@ -1,13 +1,13 @@
 import { StyleSheet } from "react-native";
-import { padding } from "../../config";
+import { Padding } from "../../config/appStyles";
 
 const styles = StyleSheet.create({
 	mainContainer: {
 		flex: 1,
-		padding: padding.m
+		padding: Padding.m
 	},
 	textContainer: {
-		padding: padding.m
+		padding: Padding.m
 	}
 });
 

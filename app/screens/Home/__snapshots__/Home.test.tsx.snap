@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should match snapshots 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "padding": 12,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "padding": 12,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#132631",
+          "fontSize": 20,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Projects
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "padding": 12,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#999999",
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            {
+              "fontSize": 20,
+            },
+          ]
+        }
+      >
+        Count Program
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#999999",
+              "fontSize": 14,
+              "fontWeight": "500",
+            },
+            {
+              "fontSize": 20,
+            },
+          ]
+        }
+      >
+        To-Do List
+      </Text>
+    </View>
+  </View>
+</View>
+`;
