@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H2 Component should match snapshots 1`] = `
+<Text
+  style={
+    {
+      "color": "#132631",
+      "fontSize": 20,
+      "fontWeight": "600",
+    }
+  }
+>
+  Test Heading
+</Text>
+`;

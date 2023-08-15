@@ -1,11 +1,11 @@
 import { Pressable, Text } from "react-native";
 
-import { fontSizes, fontStyles } from "../../config";
 import { LinkProps } from "../../types";
+import { fontSizes, fontStyles } from "../../config/appStyles";
 
-const Link = ({ value, href, onPress }: LinkProps) => {
+const Link = ({ value, onPress }: LinkProps) => {
 	return (
-		<Pressable onPress={() => onPress(href)}>
+		<Pressable onPress={onPress}>
 			<Text style={[fontStyles.content, { fontSize: fontSizes.xl }]}>
 				{value}
 			</Text>
