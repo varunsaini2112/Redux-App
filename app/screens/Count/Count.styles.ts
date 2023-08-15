@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colors, padding } from "../../config";
+import { Padding, colors } from "../../config/appStyles";
 
 const styles = StyleSheet.create({
 	mainContainer: {
@@ -8,10 +8,10 @@ const styles = StyleSheet.create({
 		alignItems: "center"
 	},
 	button: {
-		padding: padding.xl,
+		padding: Padding.xl,
 		backgroundColor: colors.primary,
-		margin: padding.xl,
-		borderRadius: padding.xl,
+		margin: Padding.xl,
+		borderRadius: Padding.xl,
 		alignItems: "center"
 	}
 });

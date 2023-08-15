@@ -1,9 +1,12 @@
+import { FC, useState } from "react";
 import { Pressable, Text, View } from "react-native";
-import styles from "./Count.styles";
-import { useState } from "react";
-import { H1 } from "../../components";
+import { StackScreenProps } from "@react-navigation/stack";
 
-const Count = () => {
+import styles from "./Count.styles";
+import { H1 } from "../../components";
+import { RootStackParamList } from "../../types";
+
+const Count: FC<StackScreenProps<RootStackParamList, "Count">> = () => {
 	const [count, setCount] = useState(0);
 
 	const increment = () => setCount((count) => count + 1);

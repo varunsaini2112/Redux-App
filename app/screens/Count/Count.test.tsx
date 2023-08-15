@@ -1,22 +1,30 @@
-import { describe, it, expect } from "@jest/globals";
 import { fireEvent, render, screen } from "@testing-library/react-native";
+
 import Count from "./Count";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../../types";
+import { RouteProp } from "@react-navigation/native";
+
+const navigation = {
+	navigate: () => {}
+} as StackNavigationProp<RootStackParamList, "Count">;
+const route = {} as RouteProp<RootStackParamList, "Count">;
 
 describe("App", () => {
-	it("renders correctly", () => {
-		const snapshot = render(<Count />);
+	it("should match snapshots", () => {
+		const snapshot = render(<Count navigation={navigation} route={route} />);
 
 		expect(snapshot).toMatchSnapshot();
 	});
 
 	it("Count renders 0 initially", () => {
-		render(<Count />);
+		render(<Count navigation={navigation} route={route} />);
 
 		expect(screen.getByText("0")).toBeOnTheScreen();
 	});
 
 	it("Count should increase on press increment button", () => {
-		render(<Count />);
+		render(<Count navigation={navigation} route={route} />);
 
 		const incrementButton = screen.getByText("Increment");
 		fireEvent.press(incrementButton);
@@ -25,7 +33,7 @@ describe("App", () => {
 	});
 
 	it("Count should decrease on press decrement button", () => {
-		render(<Count />);
+		render(<Count navigation={navigation} route={route} />);
 
 		const incrementButton = screen.getByText("Decrement");
 		fireEvent.press(incrementButton);
@@ -34,7 +42,7 @@ describe("App", () => {
 	});
 
 	it("Count should increase on press increment button", () => {
-		render(<Count />);
+		render(<Count navigation={navigation} route={route} />);
 
 		const incrementButton = screen.getByText("Increment");
 		const resetButton = screen.getByText("Reset");
