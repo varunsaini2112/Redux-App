@@ -15,7 +15,7 @@ type FormFields = "email" | "password";
 const VALIDATIONS: Record<FormFields, ValidationField> = {
 	email: {
 		required: { value: true, message: "Email is required" },
-		maxLength: { value: 256, message: "Too Long" },
+		maxLength: { value: 256, message: "Email is too long" },
 		pattern: {
 			value: REGEX.EMAIL_REGEX,
 			message: "Please enter a valid email address"
@@ -23,8 +23,8 @@ const VALIDATIONS: Record<FormFields, ValidationField> = {
 	},
 	password: {
 		required: { value: true, message: "Password is required" },
-		minLength: { value: 6, message: "Too Short" },
-		maxLength: { value: 50, message: "Too Long" },
+		minLength: { value: 6, message: "Password is too short" },
+		maxLength: { value: 50, message: "Password is too long" },
 		pattern: {
 			value: REGEX.PASSWORD_REGEX,
 			message: "Please enter a valid password"

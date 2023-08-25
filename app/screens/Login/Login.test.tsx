@@ -38,6 +38,80 @@ describe("Login", () => {
 		expect(screen.getByText("Password is required")).toBeOnTheScreen();
 	});
 
+	it("should show email length error on too long entry", async () => {
+		renderWithProviders(<Login navigation={navigation} route={route} />);
+
+		const testEmailString = "a".repeat(257);
+
+		fireEvent.changeText(
+			screen.getByPlaceholderText("someone@here.xyz"),
+			testEmailString
+		);
+		await act(async () => {
+			fireEvent.press(screen.getByText("Submit"));
+		});
+
+		expect(screen.getByText("Email is too long")).toBeOnTheScreen();
+	});
+
+	it("should show email pattern error on invalid email entry", async () => {
+		renderWithProviders(<Login navigation={navigation} route={route} />);
+
+		fireEvent.changeText(
+			screen.getByPlaceholderText("someone@here.xyz"),
+			"testEmailString"
+		);
+		await act(async () => {
+			fireEvent.press(screen.getByText("Submit"));
+		});
+
+		expect(
+			screen.getByText("Please enter a valid email address")
+		).toBeOnTheScreen();
+	});
+
+	it("should show password length error on too small entry", async () => {
+		renderWithProviders(<Login navigation={navigation} route={route} />);
+
+		fireEvent.changeText(
+			screen.getByPlaceholderText("Password here..."),
+			"pass"
+		);
+		await act(async () => {
+			fireEvent.press(screen.getByText("Submit"));
+		});
+
+		expect(screen.getByText("Password is too short")).toBeOnTheScreen();
+	});
+
+	it("should show password length error on too long entry", async () => {
+		renderWithProviders(<Login navigation={navigation} route={route} />);
+
+		fireEvent.changeText(
+			screen.getByPlaceholderText("Password here..."),
+			"pass".repeat(15)
+		);
+		await act(async () => {
+			fireEvent.press(screen.getByText("Submit"));
+		});
+
+		expect(screen.getByText("Password is too long")).toBeOnTheScreen();
+	});
+
+	it("should show password pattern error on invalid entry", async () => {
+		renderWithProviders(<Login navigation={navigation} route={route} />);
+
+		fireEvent.changeText(
+			screen.getByPlaceholderText("Password here..."),
+			"password"
+		);
+		await act(async () => {
+			fireEvent.press(screen.getByText("Submit"));
+		});
+
+		expect(screen.getByText("Please enter a valid password")).toBeOnTheScreen();
+	});
+
 	it("should submit successfully and show alert on valid field entry", async () => {
 		renderWithProviders(<Login navigation={navigation} route={route} />);
 
