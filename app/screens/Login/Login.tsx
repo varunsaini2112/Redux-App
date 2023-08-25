@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Alert, Pressable, Text, View } from "react-native";
 import { StackScreenProps } from "@react-navigation/stack";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -6,7 +5,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { RootStackParamList } from "../../types";
 import styles from "./Login.styles";
 import { Button, H1, TextInputField } from "../../components";
-import { Padding, baseStyles } from "../../config/appStyles";
+import { baseStyles } from "../../config/appStyles";
 import { VALIDATIONS } from "../../constants";
 
 type FormValues = {
@@ -14,7 +13,7 @@ type FormValues = {
 	password: string;
 };
 
-const Login: FC<StackScreenProps<RootStackParamList, "Login">> = () => {
+const Login: React.FC<StackScreenProps<RootStackParamList, "Login">> = () => {
 	const { handleSubmit, control } = useForm<FormValues>();
 
 	const onPressSubmit: SubmitHandler<FormValues> = (data) => {
@@ -46,10 +45,8 @@ const Login: FC<StackScreenProps<RootStackParamList, "Login">> = () => {
 					<Text style={baseStyles.buttonText}>Submit</Text>
 				</Button>
 			</View>
-			<Pressable style={{ alignItems: "center", marginVertical: Padding.l }}>
-				<Text style={{ textDecorationLine: "underline" }}>
-					Don't have an account?
-				</Text>
+			<Pressable style={styles.centerTextContainer}>
+				<Text style={styles.centerText}>Don't have an account?</Text>
 			</Pressable>
 		</View>
 	);

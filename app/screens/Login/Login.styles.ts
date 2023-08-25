@@ -10,6 +10,13 @@ const styles = StyleSheet.create({
 		marginVertical: Padding.xxl,
 		paddingVertical: Padding.xxl,
 		alignItems: "center"
+	},
+	centerTextContainer: {
+		alignItems: "center",
+		marginVertical: Padding.l
+	},
+	centerText: {
+		textDecorationLine: "underline"
 	}
 });
 
