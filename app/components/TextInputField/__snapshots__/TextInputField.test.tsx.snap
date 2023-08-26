@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputField Component should match snapshots 1`] = `
+[
+  <View
+    style={
+      {
+        "marginBottom": 16,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "marginHorizontal": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#132631",
+            "fontSize": 14,
+          }
+        }
+      >
+        Example Field
+      </Text>
+    </View>
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      placeholder="exampleFieldPlaceholder"
+      style={
+        {
+          "borderRadius": 16,
+          "borderWidth": 0.4,
+          "padding": 16,
+        }
+      }
+      value=""
+    />
+    <View
+      style={
+        {
+          "alignItems": "flex-end",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "red",
+            "fontSize": 12,
+          }
+        }
+      />
+    </View>
+  </View>,
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+  >
+    <Text>
+      Press me
+    </Text>
+  </View>,
+]
+`;
