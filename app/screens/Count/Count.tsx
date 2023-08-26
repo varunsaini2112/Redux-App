@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { StackScreenProps } from "@react-navigation/stack";
 
 import styles from "./Count.styles";
-import { H1 } from "../../components";
+import { Button, H1 } from "../../components";
 import { RootStackParamList } from "../../types";
 import {
 	decrement,
@@ -20,15 +20,15 @@ const Count: FC<StackScreenProps<RootStackParamList, "Count">> = () => {
 		<View style={styles.mainContainer}>
 			<H1>{count}</H1>
 			<View>
-				<Pressable onPress={() => dispatch(increment())} style={styles.button}>
+				<Button onPress={() => dispatch(increment())}>
 					<Text>Increment</Text>
-				</Pressable>
-				<Pressable onPress={() => dispatch(decrement())} style={styles.button}>
+				</Button>
+				<Button onPress={() => dispatch(decrement())}>
 					<Text>Decrement</Text>
-				</Pressable>
-				<Pressable onPress={() => dispatch(reset())} style={styles.button}>
+				</Button>
+				<Button onPress={() => dispatch(reset())}>
 					<Text>Reset</Text>
-				</Pressable>
+				</Button>
 			</View>
 		</View>
 	);

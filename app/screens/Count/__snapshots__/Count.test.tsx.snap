@@ -53,13 +53,19 @@ exports[`App should match snapshots 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#D80064",
-          "borderRadius": 20,
-          "margin": 20,
-          "padding": 20,
-        }
+        [
+          {
+            "opacity": 1,
+          },
+          {
+            "alignItems": "center",
+            "backgroundColor": "#D80064",
+            "borderRadius": 16,
+            "marginVertical": 8,
+            "padding": 16,
+          },
+          undefined,
+        ]
       }
     >
       <Text>
@@ -97,13 +103,19 @@ exports[`App should match snapshots 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#D80064",
-          "borderRadius": 20,
-          "margin": 20,
-          "padding": 20,
-        }
+        [
+          {
+            "opacity": 1,
+          },
+          {
+            "alignItems": "center",
+            "backgroundColor": "#D80064",
+            "borderRadius": 16,
+            "marginVertical": 8,
+            "padding": 16,
+          },
+          undefined,
+        ]
       }
     >
       <Text>
@@ -141,13 +153,19 @@ exports[`App should match snapshots 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#D80064",
-          "borderRadius": 20,
-          "margin": 20,
-          "padding": 20,
-        }
+        [
+          {
+            "opacity": 1,
+          },
+          {
+            "alignItems": "center",
+            "backgroundColor": "#D80064",
+            "borderRadius": 16,
+            "marginVertical": 8,
+            "padding": 16,
+          },
+          undefined,
+        ]
       }
     >
       <Text>
