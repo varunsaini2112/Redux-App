@@ -1,19 +1,20 @@
 import { Alert, Pressable, Text, View } from "react-native";
-import { StackScreenProps } from "@react-navigation/stack";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { StackScreenProps } from "@react-navigation/stack";
 
 import { RootStackParamList } from "../../types";
-import styles from "./Login.styles";
+import styles from "./SignUp.styles";
 import { Button, H1, TextInputField } from "../../components";
 import { baseStyles } from "../../config/appStyles";
 import { VALIDATIONS } from "../../constants";
 
 type FormValues = {
+	fullName: string;
 	email: string;
 	password: string;
 };
 
-const Login: React.FC<StackScreenProps<RootStackParamList, "Login">> = ({
+const SignUp: React.FC<StackScreenProps<RootStackParamList, "SignUp">> = ({
 	navigation
 }) => {
 	const { handleSubmit, control } = useForm<FormValues>();
@@ -22,16 +23,19 @@ const Login: React.FC<StackScreenProps<RootStackParamList, "Login">> = ({
 		Alert.alert(JSON.stringify(data));
 	};
 
-	const navigateToSignUp = () => {
-		navigation.navigate("SignUp");
-	};
-
 	return (
 		<View style={styles.mainContainer}>
 			<View style={styles.headingContainer}>
-				<H1>Login</H1>
+				<H1>SignUp Here</H1>
 			</View>
 			<View>
+				<TextInputField
+					name="fullName"
+					label="Full Name"
+					placeholder="Enter your full name"
+					control={control}
+					rules={VALIDATIONS.fullName}
+				/>
 				<TextInputField
 					name="email"
 					label="Email"
@@ -51,11 +55,11 @@ const Login: React.FC<StackScreenProps<RootStackParamList, "Login">> = ({
 					<Text style={baseStyles.buttonText}>Submit</Text>
 				</Button>
 			</View>
-			<Pressable onPress={navigateToSignUp} style={styles.centerTextContainer}>
-				<Text style={styles.centerText}>Don't have an account?</Text>
+			<Pressable onPress={navigation.goBack} style={styles.centerTextContainer}>
+				<Text style={styles.centerText}>Already have an account?</Text>
 			</Pressable>
 		</View>
 	);
 };
 
-export default Login;
+export default SignUp;

@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp should match snapshots 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "padding": 16,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "marginVertical": 24,
+        "paddingVertical": 24,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#132631",
+          "fontSize": 24,
+          "fontWeight": "600",
+        }
+      }
+    >
+      SignUp Here
+    </Text>
+  </View>
+  <View>
+    <View
+      style={
+        {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "marginHorizontal": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#132631",
+              "fontSize": 14,
+            }
+          }
+        >
+          Full Name
+        </Text>
+      </View>
+      <TextInput
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        placeholder="Enter your full name"
+        style={
+          {
+            "borderRadius": 16,
+            "borderWidth": 0.4,
+            "padding": 16,
+          }
+        }
+        value=""
+      />
+      <View
+        style={
+          {
+            "alignItems": "flex-end",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "red",
+              "fontSize": 12,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "marginHorizontal": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#132631",
+              "fontSize": 14,
+            }
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        placeholder="someone@here.xyz"
+        style={
+          {
+            "borderRadius": 16,
+            "borderWidth": 0.4,
+            "padding": 16,
+          }
+        }
+        value=""
+      />
+      <View
+        style={
+          {
+            "alignItems": "flex-end",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "red",
+              "fontSize": 12,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "marginBottom": 16,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "marginHorizontal": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#132631",
+              "fontSize": 14,
+            }
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        placeholder="Password here..."
+        secureTextEntry={true}
+        style={
+          {
+            "borderRadius": 16,
+            "borderWidth": 0.4,
+            "padding": 16,
+          }
+        }
+        value=""
+      />
+      <View
+        style={
+          {
+            "alignItems": "flex-end",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "red",
+              "fontSize": 12,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "opacity": 1,
+          },
+          {
+            "alignItems": "center",
+            "backgroundColor": "#D80064",
+            "borderRadius": 16,
+            "marginVertical": 8,
+            "padding": 16,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#FFFFFF",
+            "fontSize": 20,
+          }
+        }
+      >
+        Submit
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "marginVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      Already have an account?
+    </Text>
+  </View>
+</View>
+`;

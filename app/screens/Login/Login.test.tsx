@@ -1,11 +1,11 @@
+import { Alert } from "react-native";
 import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { Alert } from "react-native";
+import { act, fireEvent, screen } from "@testing-library/react-native";
 
 import { RootStackParamList } from "../../types";
 import { renderWithProviders } from "../../utils/test-utils";
 import Login from "./Login";
-import { act, fireEvent, screen } from "@testing-library/react-native";
 
 const navigation = {
 	navigate: () => {}
@@ -130,5 +130,24 @@ describe("Login", () => {
 		});
 
 		expect(alertSpy).toHaveBeenCalled();
+	});
+
+	it("should render no account text", () => {
+		renderWithProviders(<Login navigation={navigation} route={route} />);
+
+		const navigateToSignUpText = "Don't have an account?";
+
+		expect(screen.getByText(navigateToSignUpText)).toBeOnTheScreen();
+	});
+
+	it("should navigate to signup on press no account text", () => {
+		const navigationSpy = jest.spyOn(navigation, "navigate");
+		renderWithProviders(<Login navigation={navigation} route={route} />);
+
+		const navigateToSignUpText = "Don't have an account?";
+
+		fireEvent.press(screen.getByText(navigateToSignUpText));
+
+		expect(navigationSpy).toHaveBeenCalledWith("SignUp");
 	});
 });
