@@ -34,7 +34,6 @@ exports[`Login should match snapshots 1`] = `
     <View
       style={
         {
-          "borderWidth": 0,
           "marginBottom": 16,
         }
       }
@@ -90,7 +89,6 @@ exports[`Login should match snapshots 1`] = `
     <View
       style={
         {
-          "borderWidth": 0,
           "marginBottom": 16,
         }
       }
