@@ -10,9 +10,18 @@ type ValidationField<
 	"valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled"
 >;
 
-type FormFields = "email" | "password";
+type FormFields = "fullName" | "email" | "password";
 
 const VALIDATIONS: Record<FormFields, ValidationField> = {
+	fullName: {
+		required: { value: true, message: "Full Name is required" },
+		minLength: { value: 2, message: "Name is too short" },
+		maxLength: { value: 40, message: "Name is too long" },
+		pattern: {
+			value: REGEX.NAME,
+			message: "Please enter a valid name"
+		}
+	},
 	email: {
 		required: { value: true, message: "Email is required" },
 		maxLength: { value: 256, message: "Email is too long" },
