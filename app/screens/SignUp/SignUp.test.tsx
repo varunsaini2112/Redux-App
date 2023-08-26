@@ -103,7 +103,6 @@ describe("SignUp", () => {
 			fireEvent.press(screen.getByText("Submit"));
 		});
 
-		screen.debug();
 		expect(alertSpy).toHaveBeenCalled();
 	});
 
