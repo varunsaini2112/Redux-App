@@ -42,4 +42,18 @@ const fontStyles = StyleSheet.create({
 	}
 });
 
-export { fontStyles, fontSizes, Padding, colors };
+const baseStyles = StyleSheet.create({
+	button: {
+		marginVertical: Padding.s,
+		padding: Padding.l,
+		backgroundColor: colors.primary,
+		borderRadius: Padding.l,
+		alignItems: "center"
+	},
+	buttonText: {
+		fontSize: fontSizes.xl,
+		color: "#FFFFFF"
+	}
+});
+
+export { fontStyles, fontSizes, Padding, colors, baseStyles };
