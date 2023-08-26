@@ -13,11 +13,17 @@ type FormValues = {
 	password: string;
 };
 
-const Login: React.FC<StackScreenProps<RootStackParamList, "Login">> = () => {
+const Login: React.FC<StackScreenProps<RootStackParamList, "Login">> = ({
+	navigation
+}) => {
 	const { handleSubmit, control } = useForm<FormValues>();
 
 	const onPressSubmit: SubmitHandler<FormValues> = (data) => {
 		Alert.alert(JSON.stringify(data));
+	};
+
+	const navigateToSignUp = () => {
+		navigation.navigate("SignUp");
 	};
 
 	return (
@@ -45,7 +51,7 @@ const Login: React.FC<StackScreenProps<RootStackParamList, "Login">> = () => {
 					<Text style={baseStyles.buttonText}>Submit</Text>
 				</Button>
 			</View>
-			<Pressable style={styles.centerTextContainer}>
+			<Pressable onPress={navigateToSignUp} style={styles.centerTextContainer}>
 				<Text style={styles.centerText}>Don't have an account?</Text>
 			</Pressable>
 		</View>
